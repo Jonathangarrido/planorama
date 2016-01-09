@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-with, initial-scale=1, maximum-scale=1"/>
+	<title>Planorama.cl</title>
+	<link rel="stylesheet" href="estilo.css"/>
+  <script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+  <header>
+    <div><img src="img/logo.png" class="logo"></div>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#panoramas">PANORAMAS</a>
+        <a href="#acerca">ACERCA DE</a>
+        <a href="#contacto">CONTACTO</a> 
+    </nav>
+  </header>
+  <section id="home">
+  	<p class="eslogan">¿Aburrido en Santiago?</br>Haz tu Panorama.</p>
+  </section>
+  <section id="panoramas"> 
+  	<header id="pano-header">
+    	<h1>Elige tu Panorama</h1>
+        <p>Seleciona las casillas correspondiente a tus gustos.</p>
+    </header>
+  	<form action="verficar-panoramas.php" method="post">
+    	<section id="casillas">
+    		<article>
+            	<p>Deportes</p>
+     	       <img src="img/deporte.jpg" width="150px"></br>
+     	       <input type="checkbox" name="eventos[]" value="deporte"/>   
+            </article>
+            <article>
+            	<p>Gourmet</p>
+     	       <img src="img/gourmet.png" width="150px"></br>
+     	       <input type="checkbox" name="eventos[]" value="gourmet"/>   
+            </article>
+            <article>
+            	<p>Conciertos</p>
+     	       <img src="img/conciertos.png" width="150px"></br>
+     	       <input type="checkbox" name="eventos[]" value="conciertos"/>   
+            </article>
+            <article>
+            	<p>Tercera edad</p>
+     	       <img src="img/tercera-edad.jpg" width="150px"></br>
+     	       <input type="checkbox"name="eventos[]" value="tercera-edad"/>   
+            </article>
+            <article>
+            	<p>Niños</p>
+     	       <img src="img/niños.jpg" width="150px"></br>
+     	       <input type="checkbox" name="eventos[]" value="niños"/>   
+            </article>
+            <article>
+            	<p>Noche</p>
+     	       <img src="img/noche.jpg" width="150px"></br>
+     	       <input type="checkbox" name="eventos[]" value="noche"/>   
+            </article>
+            <article>
+            	<p>Cultura</p>
+     	       <img src="img/cultura.jpg" width="150px"></br>
+     	       <input type="checkbox" name="eventos[]" value="cultura"/>   
+            </article>
+            <article>
+            	<p>Charlas</p>
+     	       <img src="img/charlas.jpg" width="150px"></br>
+     	       <input type="checkbox" name="eventos[]" value="charlas"/>   
+            </article>
+            <footer>
+            	<button class='button'disabled>Buscar</button>
+            </footer>
+        </section>
+    </form>
+  </section>
+  
+  <section id="acerca">
+  	<header id="acerca-header">
+    	<h1>Acerca de Planorama</h1>		
+        <p>Planoramas en un sitio web que tiene por funcion mostrar los nuevos eventos 
+            que hay en santiago.</br> Va dirigido a pe  </p>
+    </header>
+  	<div class="main">
+				<ul id="cbp-bislideshow" class="cbp-bislideshow">
+					<li><img src="img/slider-01.jpg" alt="image01"/></li>
+					<li><img src="img/slider-02.jpg" alt="image02"/></li>
+					<li><img src="img/slider-03.jpg" alt="image03"/></li>
+					<li><img src="img/slider-04.jpg" alt="image04"/></li>
+					<li><img src="img/slider-05.jpg" alt="image05"/></li>
+					<li><img src="img/slider-06.jpg" alt="image06"/></li>
+				</ul>
+	</div>
+  </section>
+  
+  <section id="contacto">
+  	<header id="contacto-header">
+        <h1>Contacto</h1>
+        <p>Queremos tener tu opinio, llena el formulario con tus datos, comentarios y/o sugerencias.</p>
+    </header>
+    <div class="main">
+		<form class="cbp-mc-form" >
+			<div class="cbp-mc-column">
+				<label for="first_name">Nombre</label>
+	  			<input type="text" id="first_name" name="nombre">
+	  			<label for="last_name">Email</label>
+	  			<input type="text" id="last_name" name="email">
+	  		</div>
+	  		<div class="cbp-mc-column">
+				<label for="affiliations">Comentario</label>
+	  			<textarea id="affiliations" name="affiliations"></textarea>
+			</div>
+	  		<div class="cbp-mc-submit-wrap">
+			</div>
+   	</div>
+    <footer>
+            	<input type="submit" value="Enviar" class="button-form"/>
+            </footer>
+  </section>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<!-- imagesLoaded jQuery plugin by @desandro : https://github.com/desandro/imagesloaded -->
+		<script src="js/jquery.imagesloaded.min.js"></script>
+		<script src="js/cbpBGSlideshow.min.js"></script>
+		<script>
+			$(function() {
+				cbpBGSlideshow.init();
+			});
+		</script>
+</body>
+</html>
